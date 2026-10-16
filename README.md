@@ -1,4 +1,19 @@
-# Pulso — Laboratorio 06 de Django
+# Django — Laboratorios del curso
+
+Esta rama **lab07-orm** continúa el proyecto de `main`, donde se conserva el
+laboratorio 06. No es necesario crear otro repositorio.
+
+## Laboratorio 07
+
+Consulta [las instrucciones, las ocho preguntas y los resultados del laboratorio 07](LAB07.md).
+El panel de práctica se abre en `/laboratorio-7/` y demuestra consultas avanzadas,
+relaciones inversas y una reducción medida de **23 a 2 consultas**.
+
+La práctica se adaptó porque no se disponía del repositorio inicial del docente.
+Las soluciones y los ejemplos didácticos de errores se prepararon con asistencia
+de Codex; no se atribuyen al estudiante respuestas realizadas sin IA.
+
+## Laboratorio 06 — Pulso
 
 Portal académico de noticias para demostrar herencia de plantillas, fragmentos
 reutilizables, variables, etiquetas, filtros y gestión desde Django Admin.

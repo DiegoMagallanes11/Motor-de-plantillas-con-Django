@@ -1,0 +1,51 @@
+Failed to find real location of C:\Python314\python.exe
+{
+  "status": "ok",
+  "action": "list_posts",
+  "data": [
+    {
+      "id": 1,
+      "title": "ORM y relaciones"
+    },
+    {
+      "id": 2,
+      "title": "La frontera del cinco de octubre"
+    },
+    {
+      "id": 3,
+      "title": "Una historia sin categoría"
+    },
+    {
+      "id": 4,
+      "title": "Arte compartido"
+    },
+    {
+      "id": 5,
+      "title": "Diario cultural"
+    },
+    {
+      "id": 6,
+      "title": "Ciencia abierta"
+    },
+    {
+      "id": 7,
+      "title": "Django en comunidad"
+    },
+    {
+      "id": 8,
+      "title": "Registrar un experimento"
+    },
+    {
+      "id": 9,
+      "title": "Voces sin clasificación"
+    },
+    {
+      "id": 10,
+      "title": "Python para explorar datos"
+    },
+    {
+      "id": 11,
+      "title": "Una mirada cultural"
+    }
+  ]
+}

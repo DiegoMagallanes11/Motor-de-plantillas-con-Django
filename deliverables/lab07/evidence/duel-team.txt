@@ -1,0 +1,10 @@
+Failed to find real location of C:\Python314\python.exe
+Q1: accepted | 1/1 consultas
+Q2: accepted | 1/1 consultas
+Q3: accepted | 1/1 consultas
+Q4: accepted | 1/1 consultas
+Q5: accepted | 1/1 consultas
+Q6: accepted | 1/1 consultas
+Q7: accepted | 1/1 consultas
+Q8: accepted | 2/2 consultas
+Aceptadas: 8/8

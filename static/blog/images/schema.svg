@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#61823c"/></marker></defs>
+  <rect width="1200" height="430" fill="#fff"/>
+  <g fill="none" stroke="#61823c" stroke-width="2" marker-end="url(#arrow)"><path d="M270 100 H445"/><path d="M270 125 H340 V245 H445"/><path d="M690 280 H910"/><path d="M445 300 H350 V370 H95 V330"/></g>
+  <g font-family="Segoe UI,Arial,sans-serif" fill="#1d302b">
+    <g><rect x="50" y="50" width="220" height="100" rx="8" fill="#edf2e3" stroke="#b4c38d"/><text x="72" y="82" font-size="22" font-weight="600">Author</text><text x="72" y="111" font-size="15">id · name · email</text></g>
+    <g><rect x="445" y="50" width="245" height="100" rx="8" fill="#f7f6f2" stroke="#c9d2c4"/><text x="467" y="82" font-size="22" font-weight="600">Profile</text><text x="467" y="111" font-size="15">author · city · bio</text></g>
+    <g><rect x="445" y="225" width="245" height="105" rx="8" fill="#edf2e3" stroke="#b4c38d"/><text x="467" y="257" font-size="22" font-weight="600">Article</text><text x="467" y="286" font-size="15">author · category · tags</text><text x="467" y="308" font-size="15">published_at · is_published</text></g>
+    <g><rect x="910" y="225" width="235" height="105" rx="8" fill="#f7f6f2" stroke="#c9d2c4"/><text x="932" y="260" font-size="22" font-weight="600">Category</text><text x="932" y="290" font-size="15">id · name</text></g>
+    <g><rect x="910" y="50" width="235" height="100" rx="8" fill="#f7f6f2" stroke="#c9d2c4"/><text x="932" y="82" font-size="22" font-weight="600">Tag</text><text x="932" y="111" font-size="15">id · name</text></g>
+    <g><rect x="50" y="225" width="220" height="105" rx="8" fill="#f7f6f2" stroke="#c9d2c4"/><text x="72" y="257" font-size="22" font-weight="600">Comment</text><text x="72" y="286" font-size="15">article · body</text><text x="72" y="308" font-size="15">is_approved · updated_at</text></g>
+    <text x="320" y="86" font-size="16">1 ↔ 1</text><text x="352" y="195" font-size="16">1 → N</text><text x="755" y="265" font-size="16">N → 0..1</text><text x="285" y="350" font-size="16">1 → N</text>
+  </g>
+  <path d="M690 245 H795 V100 H910" fill="none" stroke="#61823c" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="807" y="180" font-family="Segoe UI,Arial,sans-serif" fill="#1d302b" font-size="16">N ↔ M</text>
+</svg>

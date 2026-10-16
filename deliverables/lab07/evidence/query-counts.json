@@ -1,0 +1,228 @@
+{
+  "before": {
+    "queries": 23,
+    "rows": 11,
+    "payload": [
+      {
+        "id": 11,
+        "title": "Una mirada cultural",
+        "author": "Elena Paz",
+        "tags": [
+          "arte"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Python para explorar datos",
+        "author": "Elena Paz",
+        "tags": [
+          "python",
+          "orm"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Voces sin clasificación",
+        "author": "Daniel Soto",
+        "tags": []
+      },
+      {
+        "id": 8,
+        "title": "Registrar un experimento",
+        "author": "Daniel Soto",
+        "tags": [
+          "ciencia"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Django en comunidad",
+        "author": "Carla Ruiz",
+        "tags": [
+          "django",
+          "orm"
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Ciencia abierta",
+        "author": "Carla Ruiz",
+        "tags": [
+          "python",
+          "ciencia"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Diario cultural",
+        "author": "Bruno Díaz",
+        "tags": [
+          "python",
+          "arte"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Arte compartido",
+        "author": "Bruno Díaz",
+        "tags": [
+          "arte"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "La frontera del cinco de octubre",
+        "author": "Ana Torres",
+        "tags": [
+          "django",
+          "orm"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Una historia sin categoría",
+        "author": "Ana Torres",
+        "tags": [
+          "python"
+        ]
+      },
+      {
+        "id": 1,
+        "title": "ORM y relaciones",
+        "author": "Ana Torres",
+        "tags": [
+          "django",
+          "python"
+        ]
+      }
+    ],
+    "sql": [
+      "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" FROM \"blog_article\" WHERE \"blog_article\".\"is_published\" ORDER BY \"blog_article\".\"published_at\" DESC, \"blog_article\".\"id\" DESC LIMIT 11",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 5 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 11 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 5 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 10 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 4 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 9 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 4 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 8 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 3 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 7 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 3 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 6 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 2 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 5 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 2 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 4 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 1 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 2 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 1 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 3 ORDER BY \"blog_tag\".\"id\" ASC",
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE \"blog_author\".\"id\" = 1 LIMIT 21",
+      "SELECT \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" = 1 ORDER BY \"blog_tag\".\"id\" ASC"
+    ]
+  },
+  "after": {
+    "queries": 2,
+    "rows": 11,
+    "payload": [
+      {
+        "id": 11,
+        "title": "Una mirada cultural",
+        "author": "Elena Paz",
+        "tags": [
+          "arte"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Python para explorar datos",
+        "author": "Elena Paz",
+        "tags": [
+          "python",
+          "orm"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Voces sin clasificación",
+        "author": "Daniel Soto",
+        "tags": []
+      },
+      {
+        "id": 8,
+        "title": "Registrar un experimento",
+        "author": "Daniel Soto",
+        "tags": [
+          "ciencia"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Django en comunidad",
+        "author": "Carla Ruiz",
+        "tags": [
+          "django",
+          "orm"
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Ciencia abierta",
+        "author": "Carla Ruiz",
+        "tags": [
+          "python",
+          "ciencia"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Diario cultural",
+        "author": "Bruno Díaz",
+        "tags": [
+          "python",
+          "arte"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Arte compartido",
+        "author": "Bruno Díaz",
+        "tags": [
+          "arte"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "La frontera del cinco de octubre",
+        "author": "Ana Torres",
+        "tags": [
+          "django",
+          "orm"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Una historia sin categoría",
+        "author": "Ana Torres",
+        "tags": [
+          "python"
+        ]
+      },
+      {
+        "id": 1,
+        "title": "ORM y relaciones",
+        "author": "Ana Torres",
+        "tags": [
+          "django",
+          "python"
+        ]
+      }
+    ],
+    "sql": [
+      "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\", \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_article\" INNER JOIN \"blog_author\" ON (\"blog_article\".\"author_id\" = \"blog_author\".\"id\") WHERE \"blog_article\".\"is_published\" ORDER BY \"blog_article\".\"published_at\" DESC, \"blog_article\".\"id\" DESC LIMIT 11",
+      "SELECT (\"blog_article_tags\".\"article_id\") AS \"_prefetch_related_val_article_id\", \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" IN (11, 10, 9, 8, 7, 6, 5, 4, 2, 3, 1) ORDER BY \"blog_tag\".\"id\" ASC"
+    ]
+  },
+  "same_payload": true
+}

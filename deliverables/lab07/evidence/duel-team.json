@@ -1,0 +1,355 @@
+[
+  {
+    "number": 1,
+    "question": "Artículos publicados desde el 05/10/2026 a las 00:00 en Lima, incluido el límite; ordenar por id.",
+    "status": "accepted",
+    "actual": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "expected": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "queries": 1,
+    "budget": 1,
+    "classification": "correcta",
+    "error": null,
+    "sql": "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" FROM \"blog_article\" WHERE (\"blog_article\".\"is_published\" AND \"blog_article\".\"published_at\" >= 2026-10-05 05:00:00) ORDER BY \"blog_article\".\"id\" ASC",
+    "captured_sql": [
+      "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" FROM \"blog_article\" WHERE (\"blog_article\".\"is_published\" AND \"blog_article\".\"published_at\" >= '2026-10-05 05:00:00') ORDER BY \"blog_article\".\"id\" ASC"
+    ]
+  },
+  {
+    "number": 2,
+    "question": "Artículos publicados de autores cuyo perfil indica Lima y cuya categoría es Tecnología; ordenar por id.",
+    "status": "accepted",
+    "actual": [
+      1,
+      2,
+      7,
+      10
+    ],
+    "expected": [
+      1,
+      2,
+      7,
+      10
+    ],
+    "queries": 1,
+    "budget": 1,
+    "classification": "correcta",
+    "error": null,
+    "sql": "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" FROM \"blog_article\" INNER JOIN \"blog_author\" ON (\"blog_article\".\"author_id\" = \"blog_author\".\"id\") INNER JOIN \"blog_profile\" ON (\"blog_author\".\"id\" = \"blog_profile\".\"author_id\") INNER JOIN \"blog_category\" ON (\"blog_article\".\"category_id\" = \"blog_category\".\"id\") WHERE (\"blog_article\".\"is_published\" AND \"blog_profile\".\"city\" = Lima AND \"blog_category\".\"name\" = Tecnología) ORDER BY \"blog_article\".\"id\" ASC",
+    "captured_sql": [
+      "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" FROM \"blog_article\" INNER JOIN \"blog_author\" ON (\"blog_article\".\"author_id\" = \"blog_author\".\"id\") INNER JOIN \"blog_profile\" ON (\"blog_author\".\"id\" = \"blog_profile\".\"author_id\") INNER JOIN \"blog_category\" ON (\"blog_article\".\"category_id\" = \"blog_category\".\"id\") WHERE (\"blog_article\".\"is_published\" AND \"blog_profile\".\"city\" = 'Lima' AND \"blog_category\".\"name\" = 'Tecnología') ORDER BY \"blog_article\".\"id\" ASC"
+    ]
+  },
+  {
+    "number": 3,
+    "question": "Artículos publicados que pertenecen a Tecnología o no tienen categoría; ordenar por id.",
+    "status": "accepted",
+    "actual": [
+      1,
+      2,
+      3,
+      7,
+      9,
+      10
+    ],
+    "expected": [
+      1,
+      2,
+      3,
+      7,
+      9,
+      10
+    ],
+    "queries": 1,
+    "budget": 1,
+    "classification": "correcta",
+    "error": null,
+    "sql": "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" FROM \"blog_article\" LEFT OUTER JOIN \"blog_category\" ON (\"blog_article\".\"category_id\" = \"blog_category\".\"id\") WHERE (\"blog_article\".\"is_published\" AND (\"blog_category\".\"name\" = Tecnología OR \"blog_article\".\"category_id\" IS NULL)) ORDER BY \"blog_article\".\"id\" ASC",
+    "captured_sql": [
+      "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" FROM \"blog_article\" LEFT OUTER JOIN \"blog_category\" ON (\"blog_article\".\"category_id\" = \"blog_category\".\"id\") WHERE (\"blog_article\".\"is_published\" AND (\"blog_category\".\"name\" = 'Tecnología' OR \"blog_article\".\"category_id\" IS NULL)) ORDER BY \"blog_article\".\"id\" ASC"
+    ]
+  },
+  {
+    "number": 4,
+    "question": "Autores con al menos un artículo publicado etiquetado django, sin repetir autores; ordenar por id.",
+    "status": "accepted",
+    "actual": [
+      1,
+      3
+    ],
+    "expected": [
+      1,
+      3
+    ],
+    "queries": 1,
+    "budget": 1,
+    "classification": "correcta",
+    "error": null,
+    "sql": "SELECT DISTINCT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" INNER JOIN \"blog_article\" ON (\"blog_author\".\"id\" = \"blog_article\".\"author_id\") INNER JOIN \"blog_article_tags\" ON (\"blog_article\".\"id\" = \"blog_article_tags\".\"article_id\") INNER JOIN \"blog_tag\" ON (\"blog_article_tags\".\"tag_id\" = \"blog_tag\".\"id\") WHERE (\"blog_article\".\"is_published\" AND \"blog_tag\".\"name\" = django) ORDER BY \"blog_author\".\"id\" ASC",
+    "captured_sql": [
+      "SELECT DISTINCT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" INNER JOIN \"blog_article\" ON (\"blog_author\".\"id\" = \"blog_article\".\"author_id\") INNER JOIN \"blog_article_tags\" ON (\"blog_article\".\"id\" = \"blog_article_tags\".\"article_id\") INNER JOIN \"blog_tag\" ON (\"blog_article_tags\".\"tag_id\" = \"blog_tag\".\"id\") WHERE (\"blog_article\".\"is_published\" AND \"blog_tag\".\"name\" = 'django') ORDER BY \"blog_author\".\"id\" ASC"
+    ]
+  },
+  {
+    "number": 5,
+    "question": "Todos los artículos con n_comments y n_tags, incluidos comentarios no aprobados; ordenar por id.",
+    "status": "accepted",
+    "actual": [
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        5,
+        3,
+        2
+      ],
+      [
+        6,
+        1,
+        2
+      ],
+      [
+        7,
+        0,
+        2
+      ],
+      [
+        8,
+        2,
+        1
+      ],
+      [
+        9,
+        1,
+        0
+      ],
+      [
+        10,
+        0,
+        2
+      ],
+      [
+        11,
+        0,
+        1
+      ],
+      [
+        12,
+        0,
+        1
+      ]
+    ],
+    "expected": [
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        5,
+        3,
+        2
+      ],
+      [
+        6,
+        1,
+        2
+      ],
+      [
+        7,
+        0,
+        2
+      ],
+      [
+        8,
+        2,
+        1
+      ],
+      [
+        9,
+        1,
+        0
+      ],
+      [
+        10,
+        0,
+        2
+      ],
+      [
+        11,
+        0,
+        1
+      ],
+      [
+        12,
+        0,
+        1
+      ]
+    ],
+    "queries": 1,
+    "budget": 1,
+    "classification": "correcta",
+    "error": null,
+    "sql": "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\", COUNT(DISTINCT \"blog_comment\".\"id\") AS \"n_comments\", COUNT(DISTINCT \"blog_article_tags\".\"tag_id\") AS \"n_tags\" FROM \"blog_article\" LEFT OUTER JOIN \"blog_comment\" ON (\"blog_article\".\"id\" = \"blog_comment\".\"article_id\") LEFT OUTER JOIN \"blog_article_tags\" ON (\"blog_article\".\"id\" = \"blog_article_tags\".\"article_id\") GROUP BY \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" ORDER BY \"blog_article\".\"id\" ASC",
+    "captured_sql": [
+      "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\", COUNT(DISTINCT \"blog_comment\".\"id\") AS \"n_comments\", COUNT(DISTINCT \"blog_article_tags\".\"tag_id\") AS \"n_tags\" FROM \"blog_article\" LEFT OUTER JOIN \"blog_comment\" ON (\"blog_article\".\"id\" = \"blog_comment\".\"article_id\") LEFT OUTER JOIN \"blog_article_tags\" ON (\"blog_article\".\"id\" = \"blog_article_tags\".\"article_id\") GROUP BY \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\" ORDER BY \"blog_article\".\"id\" ASC"
+    ]
+  },
+  {
+    "number": 6,
+    "question": "Autores que no tienen ningún comentario aprobado en ninguno de sus artículos, incluidos autores sin artículos; ordenar por id.",
+    "status": "accepted",
+    "actual": [
+      2,
+      5,
+      6,
+      7
+    ],
+    "expected": [
+      2,
+      5,
+      6,
+      7
+    ],
+    "queries": 1,
+    "budget": 1,
+    "classification": "correcta",
+    "error": null,
+    "sql": "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE NOT (EXISTS(SELECT 1 AS \"a\" FROM \"blog_article\" U1 INNER JOIN \"blog_comment\" U2 ON (U1.\"id\" = U2.\"article_id\") WHERE (U2.\"is_approved\" AND U1.\"author_id\" = (\"blog_author\".\"id\")) LIMIT 1)) ORDER BY \"blog_author\".\"id\" ASC",
+    "captured_sql": [
+      "SELECT \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_author\" WHERE NOT (EXISTS(SELECT 1 AS \"a\" FROM \"blog_article\" U1 INNER JOIN \"blog_comment\" U2 ON (U1.\"id\" = U2.\"article_id\") WHERE (U2.\"is_approved\" AND U1.\"author_id\" = (\"blog_author\".\"id\")) LIMIT 1)) ORDER BY \"blog_author\".\"id\" ASC"
+    ]
+  },
+  {
+    "number": 7,
+    "question": "Categorías con al menos dos artículos publicados y su n_articles publicado; ordenar por id.",
+    "status": "accepted",
+    "actual": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "expected": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "queries": 1,
+    "budget": 1,
+    "classification": "correcta",
+    "error": null,
+    "sql": "SELECT \"blog_category\".\"id\", \"blog_category\".\"name\", COUNT(\"blog_article\".\"id\") FILTER (WHERE \"blog_article\".\"is_published\") AS \"n_articles\" FROM \"blog_category\" LEFT OUTER JOIN \"blog_article\" ON (\"blog_category\".\"id\" = \"blog_article\".\"category_id\") GROUP BY \"blog_category\".\"id\", \"blog_category\".\"name\" HAVING COUNT(\"blog_article\".\"id\") FILTER (WHERE (\"blog_article\".\"is_published\")) >= 2 ORDER BY \"blog_category\".\"id\" ASC",
+    "captured_sql": [
+      "SELECT \"blog_category\".\"id\", \"blog_category\".\"name\", COUNT(\"blog_article\".\"id\") FILTER (WHERE \"blog_article\".\"is_published\") AS \"n_articles\" FROM \"blog_category\" LEFT OUTER JOIN \"blog_article\" ON (\"blog_category\".\"id\" = \"blog_article\".\"category_id\") GROUP BY \"blog_category\".\"id\", \"blog_category\".\"name\" HAVING COUNT(\"blog_article\".\"id\") FILTER (WHERE (\"blog_article\".\"is_published\")) >= 2 ORDER BY \"blog_category\".\"id\" ASC"
+    ]
+  },
+  {
+    "number": 8,
+    "question": "Los once artículos publicados más recientes, ordenados por fecha descendente e id descendente en empates; renderizar autor y etiquetas con máximo dos consultas.",
+    "status": "accepted",
+    "actual": [
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      2,
+      3,
+      1
+    ],
+    "expected": [
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      2,
+      3,
+      1
+    ],
+    "queries": 2,
+    "budget": 2,
+    "classification": "correcta",
+    "error": null,
+    "sql": "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\", \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_article\" INNER JOIN \"blog_author\" ON (\"blog_article\".\"author_id\" = \"blog_author\".\"id\") WHERE \"blog_article\".\"is_published\" ORDER BY \"blog_article\".\"published_at\" DESC, \"blog_article\".\"id\" DESC LIMIT 11",
+    "captured_sql": [
+      "SELECT \"blog_article\".\"id\", \"blog_article\".\"title\", \"blog_article\".\"author_id\", \"blog_article\".\"category_id\", \"blog_article\".\"published_at\", \"blog_article\".\"is_published\", \"blog_author\".\"id\", \"blog_author\".\"name\", \"blog_author\".\"email\" FROM \"blog_article\" INNER JOIN \"blog_author\" ON (\"blog_article\".\"author_id\" = \"blog_author\".\"id\") WHERE \"blog_article\".\"is_published\" ORDER BY \"blog_article\".\"published_at\" DESC, \"blog_article\".\"id\" DESC LIMIT 11",
+      "SELECT (\"blog_article_tags\".\"article_id\") AS \"_prefetch_related_val_article_id\", \"blog_tag\".\"id\", \"blog_tag\".\"name\" FROM \"blog_tag\" INNER JOIN \"blog_article_tags\" ON (\"blog_tag\".\"id\" = \"blog_article_tags\".\"tag_id\") WHERE \"blog_article_tags\".\"article_id\" IN (11, 10, 9, 8, 7, 6, 5, 4, 2, 3, 1) ORDER BY \"blog_tag\".\"id\" ASC"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "referenceAccepted": 8,
+  "intentStatuses": [
+    "ok",
+    "ok",
+    "approval_required",
+    "denied"
+  ],
+  "schemaLoaded": true,
+  "sqlDetailsExpanded": true,
+  "mobileOverflow": false,
+  "lab06Cards": 6,
+  "pageErrors": []
+}

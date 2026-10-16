@@ -1,0 +1,35 @@
+Failed to find real location of C:\Python314\python.exe
+Q1: wrong_result | 1/1 consultas
+  Esperado: [2, 4, 5, 6, 7, 8, 9, 10, 11]
+  Obtenido: [4, 5, 6, 7, 8, 9, 10, 11]
+  Diagnóstico: borde temporal excluido
+Q2: error | 0/1 consultas
+  Esperado: [1, 2, 7, 10]
+  Obtenido: None
+  Diagnóstico: campo inventado
+  FieldError: Unsupported lookup 'city' for ForeignKey or join on the field not permitted.
+Q3: wrong_result | 1/1 consultas
+  Esperado: [1, 2, 3, 7, 9, 10]
+  Obtenido: [1, 2, 7, 10]
+  Diagnóstico: significado de la pregunta
+Q4: wrong_result | 1/1 consultas
+  Esperado: [1, 3]
+  Obtenido: [1, 1, 3]
+  Diagnóstico: duplicados por relación inversa
+Q5: wrong_result | 1/1 consultas
+  Esperado: [[1, 4, 2], [2, 2, 2], [3, 0, 1], [4, 2, 1], [5, 3, 2], [6, 1, 2], [7, 0, 2], [8, 2, 1], [9, 1, 0], [10, 0, 2], [11, 0, 1], [12, 0, 1]]
+  Obtenido: [[1, 8, 8], [2, 4, 4], [3, 0, 1], [4, 2, 2], [5, 6, 6], [6, 2, 2], [7, 0, 2], [8, 2, 2], [9, 1, 0], [10, 0, 2], [11, 0, 1], [12, 0, 1]]
+  Diagnóstico: conteos multiplicados
+Q6: wrong_result | 1/1 consultas
+  Esperado: [2, 5, 6, 7]
+  Obtenido: [1, 2, 4]
+  Diagnóstico: significado de ninguno
+Q7: wrong_result | 1/1 consultas
+  Esperado: [[1, 4], [2, 3], [3, 2]]
+  Obtenido: [[1, 5], [2, 3], [3, 2]]
+  Diagnóstico: conteo de borradores
+Q8: expensive | 23/2 consultas
+  Esperado: [11, 10, 9, 8, 7, 6, 5, 4, 2, 3, 1]
+  Obtenido: [11, 10, 9, 8, 7, 6, 5, 4, 2, 3, 1]
+  Diagnóstico: correcta pero cara
+Aceptadas: 0/8
