@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title }} · Pulso{% endblock %}
+{% block heading %}<div class="breadcrumb"><a href="{% url 'news:home' %}">Inicio</a><span>/</span><span>Historia</span></div>{% endblock %}
+{% block content %}
+<article class="article-detail">
+  <div class="detail-categories">{% for item in article.categories.all %}<a href="{% url 'news:category' item.slug %}">{{ item.name }}</a>{% endfor %}</div>
+  <h1>{{ article.title }}</h1><p class="article-summary">{{ article.summary }}</p>
+  <div class="byline"><strong>{{ article.author.name }}</strong><time datetime="{{ article.published_at|date:'c' }}">{{ article.published_at|date:"d \d\e F \d\e Y" }}</time></div>
+  {% if article.featured_image %}<img class="detail-image" src="{{ article.featured_image.url }}" alt="Ilustración de {{ article.title }}">{% endif %}
+  <div class="article-body">{{ article.body|linebreaksbr }}</div>
+  <div class="author-bio"><span class="eyebrow">SOBRE EL AUTOR</span><h2>{{ article.author.name }}</h2><p>{{ article.author.bio }}</p></div>
+  <a class="back-link" href="{% url 'news:home' %}">← Todas las historias</a>
+</article>
+{% endblock %}
+{% block sidebar %}{{ block.super }}<div class="sidebar-section"><p class="eyebrow">LECTURA CON CRITERIO</p><p>Este portal presenta contenido ficticio con fines de aprendizaje.</p></div>{% endblock %}

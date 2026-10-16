@@ -1,0 +1,12 @@
+<article class="article-card">
+  <a class="card-image" href="{% url 'news:detail' article.slug %}" tabindex="-1" aria-hidden="true">
+    {% if article.featured_image %}<img src="{{ article.featured_image.url }}" alt="" loading="lazy">
+    {% else %}<div class="image-placeholder">pulso●</div>{% endif %}
+  </a>
+  <div class="card-body">
+    <div class="card-meta">{% for item in article.categories.all %}<a href="{% url 'news:category' item.slug %}">{{ item.name }}</a>{% endfor %}<time datetime="{{ article.published_at|date:'c' }}">{{ article.published_at|date:"d M Y" }}</time></div>
+    <h2><a href="{% url 'news:detail' article.slug %}">{{ article.title }}</a></h2>
+    <p>{{ article.summary|truncatewords:22 }}</p>
+    <div class="card-bottom"><span>{{ article.author.name }}</span><a href="{% url 'news:detail' article.slug %}" aria-label="Leer {{ article.title }}">Leer historia ↗</a></div>
+  </div>
+</article>

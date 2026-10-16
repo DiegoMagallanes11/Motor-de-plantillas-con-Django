@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pulso, un portal académico sobre tecnología, cultura y ciencia.">
+  <title>{% block title %}Pulso · Ideas que nos conectan{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'news/css/styles.css' %}">
+</head>
+<body>
+  <a class="skip-link" href="#content">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="{% url 'news:home' %}" aria-label="Pulso, inicio">pulso<span>●</span></a>
+      <nav aria-label="Navegación principal">
+        <a href="{% url 'news:home' %}">Inicio</a>
+        {% for item in navigation_categories %}
+          <a href="{% url 'news:category' item.slug %}" {% if category == item %}aria-current="page"{% endif %}>{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+      <a class="admin-link" href="{% url 'admin:index' %}">Acceso editorial ↗</a>
+    </div>
+  </header>
+  <div class="page-shell">
+    {% block heading %}{% endblock %}
+    <div class="content-layout">
+      <main id="content">{% block content %}{% endblock %}</main>
+      <aside aria-label="Barra lateral">
+        {% block sidebar %}
+          <div class="sidebar-section">
+            <p class="eyebrow">EXPLORA</p><h2>Encuentra tu próxima idea.</h2>
+            <p>Historias sobre lo que creamos, descubrimos y compartimos.</p>
+            <ul class="category-list">
+              {% for item in navigation_categories %}
+                <li><a href="{% url 'news:category' item.slug %}">{{ item.name }} <span>↗</span></a></li>
+              {% empty %}<li>Aún no hay categorías.</li>{% endfor %}
+            </ul>
+          </div>
+          <div class="sidebar-note"><span class="dot"></span> Un espacio para la curiosidad<p>Lee con calma. Siempre hay algo nuevo por aprender.</p></div>
+        {% endblock %}
+      </aside>
+    </div>
+  </div>
+  <footer><a class="footer-brand" href="{% url 'news:home' %}">pulso●</a><p>Portal académico · Noticias de ejemplo · Laboratorio 06</p><span>Hecho con Django</span></footer>
+</body>
+</html>

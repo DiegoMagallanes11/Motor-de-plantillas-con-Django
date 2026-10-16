@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block heading %}
+<section class="page-heading"><p class="eyebrow">EL MUNDO SIGUE CREANDO</p><h1>Ideas que nos<br><em>conectan.</em></h1><p>Tecnología, cultura y ciencia para mirar<br>lo cotidiano con otros ojos.</p></section>
+{% endblock %}
+{% block content %}
+<div class="section-heading"><h2>Últimas historias</h2><span>{{ articles|length }} publicaciones</span></div>
+<div class="article-grid">{% for article in articles %}{% include 'news/_article_card.html' with article=article only %}{% empty %}<div class="empty-state"><h2>Pronto habrá nuevas historias</h2><p>No hay noticias publicadas por el momento.</p></div>{% endfor %}</div>
+{% endblock %}

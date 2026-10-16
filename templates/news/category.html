@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}{{ category.name }} · Pulso{% endblock %}
+{% block heading %}<section class="page-heading compact"><p class="eyebrow">EXPLORA POR CATEGORÍA</p><h1>{{ category.name }}</h1><p>{{ category.description }}</p></section>{% endblock %}
+{% block content %}
+<div class="section-heading"><h2>Historias de {{ category.name }}</h2><span>{{ articles|length }} publicaciones</span></div>
+<div class="article-grid">{% for article in articles %}{% include 'news/_article_card.html' with article=article only %}{% empty %}<div class="empty-state"><h2>Aún no hay noticias en esta categoría</h2><p>Vuelve pronto para descubrir nuevas historias.</p><a href="{% url 'news:home' %}">Volver al inicio ↗</a></div>{% endfor %}</div>
+{% endblock %}
