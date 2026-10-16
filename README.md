@@ -129,7 +129,15 @@ comprobaciones visuales realmente ejecutadas.
 
 ## Entrega
 
-La guía Word describe los trece pasos, incluye las evidencias obtenidas, las
+[Descargar la guía resuelta en Word](deliverables/Lab06_Diego_Magallanes_Linares.docx).
+
+La guía de 13 páginas describe los trece pasos, incluye las evidencias obtenidas, las
 pruebas, observaciones y conclusiones. El archivo debe subirse manualmente al
 campus virtual. La publicación en GitHub y la entrega en el campus son acciones
 distintas.
+
+Resultado verificado: diez pruebas de Django aprobadas, seis noticias en tres
+categorías, imágenes y CSS cargados, navegación por categoría, escapado de HTML,
+edición desde el administrador y vista móvil sin desbordamiento horizontal.
+
+![Portada del portal Pulso](deliverables/evidence/01-home.png)

@@ -1,0 +1,48 @@
+Failed to find real location of C:\Python314\python.exe
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+Found 10 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: messages, staticfiles
+  Apply all migrations: admin, auth, contenttypes, news, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying news.0001_initial... OK
+test_admin_edit_reaches_portal (news.tests.PortalTests.test_admin_edit_reaches_portal) ... ok
+test_admin_requires_login (news.tests.PortalTests.test_admin_requires_login) ... ok
+test_admin_search_and_category_filter (news.tests.PortalTests.test_admin_search_and_category_filter) ... ok
+test_author_with_articles_is_protected (news.tests.PortalTests.test_author_with_articles_is_protected) ... ok
+test_category_filters_and_reuses_card (news.tests.PortalTests.test_category_filters_and_reuses_card) ... ok
+test_detail_escapes_html_and_displays_relations (news.tests.PortalTests.test_detail_escapes_html_and_displays_relations) ... ok
+test_drafts_future_and_missing_objects_return_404 (news.tests.PortalTests.test_drafts_future_and_missing_objects_return_404) ... ok
+test_empty_category (news.tests.PortalTests.test_empty_category) ... ok
+test_empty_home (news.tests.PortalTests.test_empty_home) ... ok
+test_home_uses_inheritance_card_and_filters (news.tests.PortalTests.test_home_uses_inheritance_card_and_filters) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.695s
+
+OK
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+  Applying sessions.0001_initial... OK
+System check identified no issues (0 silenced).
