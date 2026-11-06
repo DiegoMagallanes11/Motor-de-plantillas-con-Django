@@ -1,0 +1,144 @@
+Found 100 test(s).
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+Operations to perform:
+  Synchronize unmigrated apps: drf_spectacular, messages, rest_framework, staticfiles
+  Apply all migrations: admin, auth, authtoken, blog, contenttypes, news, quiz, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+  Applying authtoken.0003_tokenproxy... OK
+  Applying authtoken.0004_alter_tokenproxy_options... OK
+  Applying blog.0001_initial... OK
+  Applying news.0001_initial... OK
+  Applying quiz.0001_initial... OK
+  Applying sessions.0001_initial... OK
+System check identified no issues (0 silenced).
+test_added_comment_invalidates_approval (blog.tests.test_agent.AgentTests.test_added_comment_invalidates_approval) ... ok
+test_edited_comment_invalidates_approval (blog.tests.test_agent.AgentTests.test_edited_comment_invalidates_approval) ... ok
+test_executed_plan_cannot_be_replayed (blog.tests.test_agent.AgentTests.test_executed_plan_cannot_be_replayed) ... ok
+test_four_intents_have_expected_statuses (blog.tests.test_agent.AgentTests.test_four_intents_have_expected_statuses) ... ok
+test_injected_comment_is_data_and_never_a_command (blog.tests.test_agent.AgentTests.test_injected_comment_is_data_and_never_a_command) ... ok
+test_malformed_approval_is_denied_without_crashing (blog.tests.test_agent.AgentTests.test_malformed_approval_is_denied_without_crashing) ... ok
+test_matching_plan_deletes_only_the_approved_article_comments (blog.tests.test_agent.AgentTests.test_matching_plan_deletes_only_the_approved_article_comments) ... ok
+test_no_deletion_without_matching_approval (blog.tests.test_agent.AgentTests.test_no_deletion_without_matching_approval) ... ok
+test_parser_rejects_appended_instructions (blog.tests.test_agent.AgentTests.test_parser_rejects_appended_instructions) ... ok
+test_plan_for_other_article_is_rejected (blog.tests.test_agent.AgentTests.test_plan_for_other_article_is_rejected) ... ok
+test_unknown_action_and_extra_arguments_are_denied (blog.tests.test_agent.AgentTests.test_unknown_action_and_extra_arguments_are_denied) ... ok
+test_all_eight_reference_solutions_match_fixed_keys_and_budgets (blog.tests.test_duel.DuelTests.test_all_eight_reference_solutions_match_fixed_keys_and_budgets) ... ok
+test_dashboard_handles_an_unseeded_database (blog.tests.test_duel.DuelTests.test_dashboard_handles_an_unseeded_database) ... ok
+test_dashboard_is_read_only_and_displays_verified_results (blog.tests.test_duel.DuelTests.test_dashboard_is_read_only_and_displays_verified_results) ... ok
+test_deliberately_faulty_candidates_are_detected (blog.tests.test_duel.DuelTests.test_deliberately_faulty_candidates_are_detected) ... ok
+test_nullable_category_and_zero_relations_are_preserved (blog.tests.test_duel.DuelTests.test_nullable_category_and_zero_relations_are_preserved) ... ok
+test_optimization_preserves_all_rendered_fields (blog.tests.test_duel.DuelTests.test_optimization_preserves_all_rendered_fields) ... ok
+test_query_count_stays_constant_when_articles_grow (blog.tests.test_duel.DuelTests.test_query_count_stays_constant_when_articles_grow) ... ok
+test_reverse_relation_returns_authors_without_articles (blog.tests.test_duel.DuelTests.test_reverse_relation_returns_authors_without_articles) ... ok
+test_seed_is_reproducible_and_preserves_news (blog.tests.test_duel.DuelTests.test_seed_is_reproducible_and_preserves_news) ... ok
+test_front_page_uses_two_queries (blog.tests.test_front_page.FrontPageTests.test_front_page_uses_two_queries) ... ok
+test_admin_edit_reaches_portal (news.tests.PortalTests.test_admin_edit_reaches_portal) ... ok
+test_admin_requires_login (news.tests.PortalTests.test_admin_requires_login) ... ok
+test_admin_search_and_category_filter (news.tests.PortalTests.test_admin_search_and_category_filter) ... ok
+test_author_with_articles_is_protected (news.tests.PortalTests.test_author_with_articles_is_protected) ... ok
+test_category_filters_and_reuses_card (news.tests.PortalTests.test_category_filters_and_reuses_card) ... ok
+test_detail_escapes_html_and_displays_relations (news.tests.PortalTests.test_detail_escapes_html_and_displays_relations) ... ok
+test_drafts_future_and_missing_objects_return_404 (news.tests.PortalTests.test_drafts_future_and_missing_objects_return_404) ... ok
+test_empty_category (news.tests.PortalTests.test_empty_category) ... ok
+test_empty_home (news.tests.PortalTests.test_empty_home) ... ok
+test_home_uses_inheritance_card_and_filters (news.tests.PortalTests.test_home_uses_inheritance_card_and_filters) ... ok
+test_a_missing_required_field_is_400 (quiz.tests.test_api.ApiTests.test_a_missing_required_field_is_400) ... ok
+test_a_person_can_delete_and_then_it_is_gone (quiz.tests.test_api.ApiTests.test_a_person_can_delete_and_then_it_is_gone) ... ok
+test_a_valid_question_is_created_with_201 (quiz.tests.test_api.ApiTests.test_a_valid_question_is_created_with_201) ... ok
+test_a_wrong_token_is_401 (quiz.tests.test_api.ApiTests.test_a_wrong_token_is_401) ... ok
+test_a_wrong_type_is_400 (quiz.tests.test_api.ApiTests.test_a_wrong_type_is_400) ... ok
+test_choices_travel_nested_inside_the_question (quiz.tests.test_api.ApiTests.test_choices_travel_nested_inside_the_question) ... ok
+test_exams_are_listed_with_their_question_count (quiz.tests.test_api.ApiTests.test_exams_are_listed_with_their_question_count) ... ok
+test_no_token_is_401 (quiz.tests.test_api.ApiTests.test_no_token_is_401) ... ok
+test_patch_changes_only_what_is_sent (quiz.tests.test_api.ApiTests.test_patch_changes_only_what_is_sent) ... ok
+test_questions_are_paginated_five_at_a_time (quiz.tests.test_api.ApiTests.test_questions_are_paginated_five_at_a_time) ... ok
+test_questions_can_be_filtered_by_exam (quiz.tests.test_api.ApiTests.test_questions_can_be_filtered_by_exam) ... ok
+test_questions_can_be_searched_by_text (quiz.tests.test_api.ApiTests.test_questions_can_be_searched_by_text) ... ok
+test_two_correct_choices_is_400_and_saves_nothing (quiz.tests.test_api.ApiTests.test_two_correct_choices_is_400_and_saves_nothing) ... ok
+test_every_operation_the_gateway_offers_exists_in_the_contract (quiz.tests.test_api.ContractTests.test_every_operation_the_gateway_offers_exists_in_the_contract)
+If the API changes and the allowlist does not, this fails: the contract is the source of truth. ... ok
+test_the_contract_declares_token_authentication (quiz.tests.test_api.ContractTests.test_the_contract_declares_token_authentication) ... ok
+test_agent_cannot_delete_a_choice (quiz.tests.test_choices.ChoiceInvariantTests.test_agent_cannot_delete_a_choice) ... ok
+test_cannot_create_second_correct_option (quiz.tests.test_choices.ChoiceInvariantTests.test_cannot_create_second_correct_option) ... ok
+test_cannot_delete_correct_option_or_unmark_it (quiz.tests.test_choices.ChoiceInvariantTests.test_cannot_delete_correct_option_or_unmark_it) ... ok
+test_create_wrong_option_and_patch_and_delete_it (quiz.tests.test_choices.ChoiceInvariantTests.test_create_wrong_option_and_patch_and_delete_it) ... ok
+test_invalid_filter_returns_400 (quiz.tests.test_choices.ChoiceInvariantTests.test_invalid_filter_returns_400) ... ok
+test_nested_patch_invalid_data_is_atomic (quiz.tests.test_choices.ChoiceInvariantTests.test_nested_patch_invalid_data_is_atomic) ... ok
+test_partial_nested_replacement_requires_text (quiz.tests.test_choices.ChoiceInvariantTests.test_partial_nested_replacement_requires_text) ... ok
+test_router_exposes_three_resources (quiz.tests.test_choices.ChoiceInvariantTests.test_router_exposes_three_resources) ... ok
+test_a_person_can_delete (quiz.tests.test_permissions.RoleTests.test_a_person_can_delete) ... ok
+test_no_token_is_401_not_403 (quiz.tests.test_permissions.RoleTests.test_no_token_is_401_not_403) ... ok
+test_somebody_without_a_role_can_only_read (quiz.tests.test_permissions.RoleTests.test_somebody_without_a_role_can_only_read) ... ok
+test_the_agent_can_create (quiz.tests.test_permissions.RoleTests.test_the_agent_can_create) ... ok
+test_the_agent_can_modify (quiz.tests.test_permissions.RoleTests.test_the_agent_can_modify) ... ok
+test_the_agent_can_read (quiz.tests.test_permissions.RoleTests.test_the_agent_can_read) ... ok
+test_the_agent_cannot_delete (quiz.tests.test_permissions.RoleTests.test_the_agent_cannot_delete) ... ok
+test_the_agent_cannot_delete_an_exam_either (quiz.tests.test_permissions.RoleTests.test_the_agent_cannot_delete_an_exam_either) ... ok
+test_a_model_that_obeys_the_hostile_text_only_gets_a_plan (quiz.tests.test_agent.GatewayTests.test_a_model_that_obeys_the_hostile_text_only_gets_a_plan) ... ok
+test_a_person_approving_the_exact_plan_applies_it_with_their_own_token (quiz.tests.test_agent.GatewayTests.test_a_person_approving_the_exact_plan_applies_it_with_their_own_token) ... ok
+test_a_read_runs_and_comes_back_marked_untrusted (quiz.tests.test_agent.GatewayTests.test_a_read_runs_and_comes_back_marked_untrusted) ... ok
+test_an_approval_for_another_plan_is_worthless (quiz.tests.test_agent.GatewayTests.test_an_approval_for_another_plan_is_worthless) ... ok
+test_an_operation_that_left_the_contract_is_no_longer_offered (quiz.tests.test_agent.GatewayTests.test_an_operation_that_left_the_contract_is_no_longer_offered) ... ok
+test_arguments_must_fit_exactly (quiz.tests.test_agent.GatewayTests.test_arguments_must_fit_exactly) ... ok
+test_code_is_not_an_intent (quiz.tests.test_agent.GatewayTests.test_code_is_not_an_intent) ... ok
+test_deleting_something_that_does_not_exist_is_not_found (quiz.tests.test_agent.GatewayTests.test_deleting_something_that_does_not_exist_is_not_found) ... ok
+test_every_decision_leaves_a_line_in_the_audit_log (quiz.tests.test_agent.GatewayTests.test_every_decision_leaves_a_line_in_the_audit_log) ... ok
+test_the_agent_can_create_a_question (quiz.tests.test_agent.GatewayTests.test_the_agent_can_create_a_question) ... ok
+test_the_approval_dies_if_the_data_changed_after_the_person_looked (quiz.tests.test_agent.GatewayTests.test_the_approval_dies_if_the_data_changed_after_the_person_looked) ... ok
+test_the_approval_without_the_persons_token_is_denied (quiz.tests.test_agent.GatewayTests.test_the_approval_without_the_persons_token_is_denied) ... ok
+test_the_hostile_text_is_data_not_an_order (quiz.tests.test_agent.GatewayTests.test_the_hostile_text_is_data_not_an_order) ... ok
+test_the_server_validates_the_body_the_gateway_forwards (quiz.tests.test_agent.GatewayTests.test_the_server_validates_the_body_the_gateway_forwards) ... ok
+test_unknown_operations_are_denied (quiz.tests.test_agent.GatewayTests.test_unknown_operations_are_denied) ... ok
+test_a_reply_without_json_is_an_error (quiz.tests.test_agent.ModelAdapterTests.test_a_reply_without_json_is_an_error) ... ok
+test_ask_model_uses_the_endpoint_and_lists_the_closed_operations (quiz.tests.test_agent.ModelAdapterTests.test_ask_model_uses_the_endpoint_and_lists_the_closed_operations) ... ok
+test_it_parses_an_intent_wrapped_in_fences (quiz.tests.test_agent.ModelAdapterTests.test_it_parses_an_intent_wrapped_in_fences) ... ok
+test_a_missing_question_exits_four (quiz.tests.test_quizctl.CliLiveTests.test_a_missing_question_exits_four) ... ok
+test_a_wrong_token_exits_three (quiz.tests.test_quizctl.CliLiveTests.test_a_wrong_token_exits_three) ... ok
+test_create_a_valid_question (quiz.tests.test_quizctl.CliLiveTests.test_create_a_valid_question) ... ok
+test_dry_run_describes_and_creates_nothing (quiz.tests.test_quizctl.CliLiveTests.test_dry_run_describes_and_creates_nothing) ... ok
+test_exams_list (quiz.tests.test_quizctl.CliLiveTests.test_exams_list) ... ok
+test_json_output_is_stable (quiz.tests.test_quizctl.CliLiveTests.test_json_output_is_stable) ... ok
+test_no_connection_exits_six (quiz.tests.test_quizctl.CliLiveTests.test_no_connection_exits_six) ... ok
+test_no_token_is_a_usage_error (quiz.tests.test_quizctl.CliLiveTests.test_no_token_is_a_usage_error) ... ok
+test_ops_lists_the_contract (quiz.tests.test_quizctl.CliLiveTests.test_ops_lists_the_contract) ... ok
+test_the_agent_token_cannot_delete_exit_three (quiz.tests.test_quizctl.CliLiveTests.test_the_agent_token_cannot_delete_exit_three)
+Needs part 3 done: the SERVER must answer 403 to the agent's DELETE. ... ok
+test_two_correct_choices_exit_two_with_the_reason (quiz.tests.test_quizctl.CliLiveTests.test_two_correct_choices_exit_two_with_the_reason) ... ok
+test_anything_else_is_one (quiz.tests.test_quizctl.ExitCodeTests.test_anything_else_is_one) ... ok
+test_not_allowed_is_three (quiz.tests.test_quizctl.ExitCodeTests.test_not_allowed_is_three) ... ok
+test_not_found_is_four (quiz.tests.test_quizctl.ExitCodeTests.test_not_found_is_four) ... ok
+test_server_errors_are_five (quiz.tests.test_quizctl.ExitCodeTests.test_server_errors_are_five) ... ok
+test_success_is_zero (quiz.tests.test_quizctl.ExitCodeTests.test_success_is_zero) ... ok
+test_validation_is_two (quiz.tests.test_quizctl.ExitCodeTests.test_validation_is_two) ... ok
+test_it_does_not_validate_that_is_the_servers_job (quiz.tests.test_quizctl.PayloadTests.test_it_does_not_validate_that_is_the_servers_job) ... ok
+test_ok_marks_the_correct_choice (quiz.tests.test_quizctl.PayloadTests.test_ok_marks_the_correct_choice) ... ok
+test_only_the_final_ok_counts (quiz.tests.test_quizctl.PayloadTests.test_only_the_final_ok_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 100 tests in 6.012s
+
+OK
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...

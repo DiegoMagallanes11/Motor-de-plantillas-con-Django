@@ -9,3 +9,4 @@ staticfiles/
 .private/
 deliverables/qa/
 *.log
+agent_audit.jsonl

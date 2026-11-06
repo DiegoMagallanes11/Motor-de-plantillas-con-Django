@@ -1,7 +1,16 @@
 # Django — Laboratorios del curso
 
-Esta rama **lab07-orm** continúa el proyecto de `main`, donde se conserva el
-laboratorio 06. No es necesario crear otro repositorio.
+Esta rama **lab08-restframework** continúa el proyecto del laboratorio 07.
+`main` conserva el laboratorio 06 y `lab07-orm` conserva el laboratorio 07.
+
+## Laboratorio 08
+
+Consulta [la instalación, tabla de la API, pruebas y observaciones](LAB08.md).
+La [guía resuelta en Word con conclusiones](deliverables/lab08/Lab08_Diego_Magallanes_Linares.docx)
+incluye las evidencias de los tres recursos, las cinco operaciones HTTP y los errores.
+Se incorporaron también OpenAPI, el cliente de consola y la frontera del agente
+del repositorio extra del docente. La ejecución registrada aprobó **100 pruebas**
+y **34 peticiones reales con curl**.
 
 ## Laboratorio 07
 

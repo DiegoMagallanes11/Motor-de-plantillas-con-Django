@@ -1,0 +1,190 @@
+Failed to find real location of C:\Python314\python.exe
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+Found 17 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: drf_spectacular, messages, rest_framework, staticfiles
+  Apply all migrations: admin, auth, authtoken, blog, contenttypes, news, quiz, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+  Applying authtoken.0003_tokenproxy... OK
+  Applying authtoken.0004_alter_tokenproxy_options... OK
+  Applying blog.0001_initial... OK
+  Applying news.0001_initial... OK
+  Applying quiz.0001_initial... OK
+test_a_person_can_delete (quiz.tests.test_permissions.RoleTests.test_a_person_can_delete) ... ok
+test_no_token_is_401_not_403 (quiz.tests.test_permissions.RoleTests.test_no_token_is_401_not_403) ... ok
+test_somebody_without_a_role_can_only_read (quiz.tests.test_permissions.RoleTests.test_somebody_without_a_role_can_only_read) ... FAIL
+test_the_agent_can_create (quiz.tests.test_permissions.RoleTests.test_the_agent_can_create) ... ok
+test_the_agent_can_modify (quiz.tests.test_permissions.RoleTests.test_the_agent_can_modify) ... ok
+test_the_agent_can_read (quiz.tests.test_permissions.RoleTests.test_the_agent_can_read) ... ok
+test_the_agent_cannot_delete (quiz.tests.test_permissions.RoleTests.test_the_agent_cannot_delete) ... FAIL
+test_the_agent_cannot_delete_an_exam_either (quiz.tests.test_permissions.RoleTests.test_the_agent_cannot_delete_an_exam_either) ... FAIL
+test_anything_else_is_one (quiz.tests.test_quizctl.ExitCodeTests.test_anything_else_is_one) ... ERROR
+test_not_allowed_is_three (quiz.tests.test_quizctl.ExitCodeTests.test_not_allowed_is_three) ... ERROR
+test_not_found_is_four (quiz.tests.test_quizctl.ExitCodeTests.test_not_found_is_four) ... ERROR
+test_server_errors_are_five (quiz.tests.test_quizctl.ExitCodeTests.test_server_errors_are_five) ... ERROR
+test_success_is_zero (quiz.tests.test_quizctl.ExitCodeTests.test_success_is_zero) ... ERROR
+test_validation_is_two (quiz.tests.test_quizctl.ExitCodeTests.test_validation_is_two) ... ERROR
+test_it_does_not_validate_that_is_the_servers_job (quiz.tests.test_quizctl.PayloadTests.test_it_does_not_validate_that_is_the_servers_job) ... ERROR
+test_ok_marks_the_correct_choice (quiz.tests.test_quizctl.PayloadTests.test_ok_marks_the_correct_choice) ... ERROR
+test_only_the_final_ok_counts (quiz.tests.test_quizctl.PayloadTests.test_only_the_final_ok_counts) ... ERROR
+
+======================================================================
+ERROR: test_anything_else_is_one (quiz.tests.test_quizctl.ExitCodeTests.test_anything_else_is_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 37, in test_anything_else_is_one
+    self.assertEqual(quizctl.exit_code_for(status), 1, status)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 50, in exit_code_for
+    raise NotImplementedError("TODO(team): map the HTTP status to an exit code")
+NotImplementedError: TODO(team): map the HTTP status to an exit code
+
+======================================================================
+ERROR: test_not_allowed_is_three (quiz.tests.test_quizctl.ExitCodeTests.test_not_allowed_is_three)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 25, in test_not_allowed_is_three
+    self.assertEqual(quizctl.exit_code_for(401), 3)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 50, in exit_code_for
+    raise NotImplementedError("TODO(team): map the HTTP status to an exit code")
+NotImplementedError: TODO(team): map the HTTP status to an exit code
+
+======================================================================
+ERROR: test_not_found_is_four (quiz.tests.test_quizctl.ExitCodeTests.test_not_found_is_four)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 29, in test_not_found_is_four
+    self.assertEqual(quizctl.exit_code_for(404), 4)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 50, in exit_code_for
+    raise NotImplementedError("TODO(team): map the HTTP status to an exit code")
+NotImplementedError: TODO(team): map the HTTP status to an exit code
+
+======================================================================
+ERROR: test_server_errors_are_five (quiz.tests.test_quizctl.ExitCodeTests.test_server_errors_are_five)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 32, in test_server_errors_are_five
+    self.assertEqual(quizctl.exit_code_for(500), 5)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 50, in exit_code_for
+    raise NotImplementedError("TODO(team): map the HTTP status to an exit code")
+NotImplementedError: TODO(team): map the HTTP status to an exit code
+
+======================================================================
+ERROR: test_success_is_zero (quiz.tests.test_quizctl.ExitCodeTests.test_success_is_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 19, in test_success_is_zero
+    self.assertEqual(quizctl.exit_code_for(status), 0, status)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 50, in exit_code_for
+    raise NotImplementedError("TODO(team): map the HTTP status to an exit code")
+NotImplementedError: TODO(team): map the HTTP status to an exit code
+
+======================================================================
+ERROR: test_validation_is_two (quiz.tests.test_quizctl.ExitCodeTests.test_validation_is_two)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 22, in test_validation_is_two
+    self.assertEqual(quizctl.exit_code_for(400), 2)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 50, in exit_code_for
+    raise NotImplementedError("TODO(team): map the HTTP status to an exit code")
+NotImplementedError: TODO(team): map the HTTP status to an exit code
+
+======================================================================
+ERROR: test_it_does_not_validate_that_is_the_servers_job (quiz.tests.test_quizctl.PayloadTests.test_it_does_not_validate_that_is_the_servers_job)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 54, in test_it_does_not_validate_that_is_the_servers_job
+    body = quizctl.build_question_payload(1, "t", ["a:ok", "b:ok"])  # two correct: the server will say 400
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 64, in build_question_payload
+    raise NotImplementedError("TODO(team): build the body from the --choice options")
+NotImplementedError: TODO(team): build the body from the --choice options
+
+======================================================================
+ERROR: test_ok_marks_the_correct_choice (quiz.tests.test_quizctl.PayloadTests.test_ok_marks_the_correct_choice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 42, in test_ok_marks_the_correct_choice
+    body = quizctl.build_question_payload(3, "¿Qué es REST?", ["Un estilo:ok", "Un lenguaje"])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 64, in build_question_payload
+    raise NotImplementedError("TODO(team): build the body from the --choice options")
+NotImplementedError: TODO(team): build the body from the --choice options
+
+======================================================================
+ERROR: test_only_the_final_ok_counts (quiz.tests.test_quizctl.PayloadTests.test_only_the_final_ok_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_quizctl.py", line 49, in test_only_the_final_ok_counts
+    body = quizctl.build_question_payload(1, "t", ["Verdad: sí:ok", "ok es una palabra"])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quizctl.py", line 64, in build_question_payload
+    raise NotImplementedError("TODO(team): build the body from the --choice options")
+NotImplementedError: TODO(team): build the body from the --choice options
+
+======================================================================
+FAIL: test_somebody_without_a_role_can_only_read (quiz.tests.test_permissions.RoleTests.test_somebody_without_a_role_can_only_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_permissions.py", line 49, in test_somebody_without_a_role_can_only_read
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        self.as_(self.reader).post("/api/questions/", valid_body(exam_id()), format="json").status_code, 403
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 201 != 403
+
+======================================================================
+FAIL: test_the_agent_cannot_delete (quiz.tests.test_permissions.RoleTests.test_the_agent_cannot_delete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_permissions.py", line 37, in test_the_agent_cannot_delete
+    self.assertEqual(response.status_code, 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 204 != 403
+
+======================================================================
+FAIL: test_the_agent_cannot_delete_an_exam_either (quiz.tests.test_permissions.RoleTests.test_the_agent_cannot_delete_an_exam_either)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Magal\OneDrive\Documentos\ChatGPT\Django\quiz\tests\test_permissions.py", line 41, in test_the_agent_cannot_delete_an_exam_either
+    self.assertEqual(self.as_(self.agent).delete(f"/api/exams/{exam_id()}/").status_code, 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 204 != 403
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.143s
+
+FAILED (failures=3, errors=9)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+  Applying sessions.0001_initial... OK
+System check identified no issues (0 silenced).

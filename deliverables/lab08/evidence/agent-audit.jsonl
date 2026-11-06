@@ -1,0 +1,10 @@
+{"at": "2026-10-21T17:09:59+00:00", "actor": "agent", "op": "exams_list", "risk": "R0", "outcome": "ok"}
+{"at": "2026-10-21T17:09:59+00:00", "actor": "agent", "op": "questions_list", "risk": "R0", "outcome": "ok"}
+{"at": "2026-10-21T17:10:00+00:00", "actor": "agent", "op": "exams_destroy", "risk": "R2", "outcome": "approval_required"}
+{"at": "2026-10-21T17:10:00+00:00", "actor": "agent", "op": "None", "risk": "-", "outcome": "denied"}
+{"at": "2026-10-21T17:10:00+00:00", "actor": "agent", "op": "run_sql", "risk": "-", "outcome": "denied"}
+{"at": "2026-10-21T17:10:00+00:00", "actor": "agent", "op": "questions_destroy", "risk": "R2", "outcome": "approval_required"}
+{"at": "2026-10-21T17:10:00+00:00", "actor": "agent", "op": "questions_destroy", "risk": "R2", "outcome": "approval_required"}
+{"at": "2026-10-21T17:10:00+00:00", "actor": "agent", "op": "questions_destroy", "risk": "R2", "outcome": "denied"}
+{"at": "2026-10-21T17:10:00+00:00", "actor": "agent", "op": "questions_destroy", "risk": "R2", "outcome": "error"}
+{"at": "2026-10-21T17:10:00+00:00", "actor": "agent", "op": "questions_destroy", "risk": "R2", "outcome": "applied"}

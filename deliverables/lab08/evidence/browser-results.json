@@ -1,0 +1,30 @@
+{
+  "steps": [
+    {
+      "operation": "list",
+      "status": 200
+    },
+    {
+      "operation": "create",
+      "status": 201
+    },
+    {
+      "operation": "retrieve",
+      "status": 200
+    },
+    {
+      "operation": "partial update",
+      "status": 200
+    },
+    {
+      "operation": "delete",
+      "status": 200,
+      "displayed204": true
+    },
+    {
+      "operation": "retrieve deleted",
+      "status": 404
+    }
+  ],
+  "docsStatus": 200
+}
