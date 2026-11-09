@@ -10,3 +10,5 @@ staticfiles/
 deliverables/qa/
 *.log
 agent_audit.jsonl
+node_modules/
+frontend/dist/

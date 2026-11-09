@@ -1,0 +1,119 @@
+
+Página
+4
+de 4
+9
+ReactJS.
+Michael Montgomery Rosell
+Desarrollo de Aplicaciones
+Empresariales
+4-C24-A
+Desarrollo de Aplicaciones Empresariales
+ReactJS.
+4-C24-A
+I. Capacidades
+a. - Crea un proyecto de React con Vite y lo levanta en el servidor de desarrollo.
+- Escribe componentes funcionales con JSX y los compone para armar una interfaz
+completa.
+- Pasa datos de un componente padre a sus hijos mediante props.
+II. Seguridad
+a. En este laboratorio está prohibida la manipulación del hardware y de las
+conexiones eléctricas o de red de los equipos, así como la ingestión de
+alimentos o bebidas en las estaciones de trabajo.
+Ubicar mochilas y maletines en el lugar destinado para ello, de modo que no
+obstruyan el paso ni las salidas.
+Al terminar la sesión, cerrar las sesiones abiertas en el equipo —incluidas
+las del repositorio y las de los servicios en línea que use la aplicación— y
+dejar la estación de trabajo y la silla limpias y ordenadas.
+III. Fundamento teórico
+a. Revisar, antes de iniciar el laboratorio, el material de la sesión de aula de
+la semana publicado en el campus virtual: la presentación del tema y el
+cuestionario de refuerzo. Cada laboratorio implementa lo que la sesión de
+aula presentó; sin ese repaso, el tiempo de laboratorio se va en entender el
+concepto en vez de en construirlo.
+El proyecto del laboratorio es acumulativo: cada semana se parte del
+resultado de la anterior, no de un proyecto en blanco.
+IV. Normas empleadas
+a. Código Python según PEP 8 y la estructura de proyecto de Django: una
+aplicación por responsabilidad, modelos en singular, migraciones versionadas
+y `settings.py` sin credenciales escritas a mano.
+Código JavaScript según el estándar de ReactJS: componentes en PascalCase,
+hooks con el prefijo `use` y una carpeta por componente.
+Todo el código, los nombres de variables y los comentarios se escriben en
+inglés; los entregables y las explicaciones, en español.
+V. Recursos
+a. Cada estudiante trabaja en un equipo con Windows 10 o superior, con Python
+3.12 o superior, Node.js 20 o superior, Git y Visual Studio Code instalados,
+y con acceso a internet.
+Cuentas necesarias: una cuenta de GitHub para el repositorio del equipo y las
+de los servicios en línea que pida la sesión (la pasarela de pago en la
+semana 16 trabaja en modo de pruebas, nunca con dinero real).
+VI. Metodología para el desarrollo de la tarea
+Desarrollo de Aplicaciones Empresariales
+ReactJS.
+4-C24-A
+a. El laboratorio se desarrolla en equipo, repartiendo el trabajo entre los
+integrantes y dejando constancia de quién hizo qué.
+El proyecto se sube a un solo repositorio de GitHub por equipo. La evidencia
+de cada laboratorio se registra en la sección de desarrollo del entregable
+con este formato: nombre del alumno, título del desarrollo, captura del
+resultado, código, explicación del resultado y casos de prueba, más una
+captura de la estructura del proyecto en el editor.
+El entregable se sube al campus virtual dentro del plazo de la semana.
+VII. Procedimiento
+1. Comprobar la versión de Node instalada, crear el proyecto con npm create vite@latest eligiendo
+la plantilla de React, instalar las dependencias y levantarlo con npm run dev.
+2. Limpiar el andamiaje que trae la plantilla y dejar index.html, src/main.jsx y src/App.jsx con lo
+mínimo que funcione.
+3. Organizar src/ en carpetas por responsabilidad —componentes, datos y estilos— y crear la
+arquitectura de CSS de la guía.
+4. Escribir el archivo de datos con la cartelera: al menos ocho películas con título, imagen,
+sinopsis, clasificación, valoración y horarios.
+5. Escribir el componente Header con el nombre del cine y la navegación, y comprobarlo en
+pantalla antes de seguir.
+6. Escribir el componente Footer con los datos de contacto e información.
+7. Escribir el componente Hero con el banner de la película destacada, recibiendo la película por
+props.
+8. Escribir el componente MovieCard, que recibe una película por props y muestra su imagen, su
+título, su valoración y sus horarios.
+9. Escribir el componente MovieList, que recorre la cartelera con map y dibuja una tarjeta por
+película, pasando la clave a cada elemento.
+10. Componer todo en App.jsx y comprobar en el navegador que la cartelera completa se dibuja
+con los datos del archivo.
+11. Provocar tres errores típicos y registrar el mensaje de cada uno: usar class en vez de
+className, devolver dos nodos raíz y olvidar la clave en el map.
+12. Subir el proyecto al repositorio del equipo y el entregable con las capturas, el código y el
+recorte en componentes de la interfaz al campus virtual.
+### Cómo se evalúa este laboratorio (20 puntos)
+Se califica con esta rúbrica, la misma que verás en Canvas junto a tu nota.
+1. Crea el proyecto de React con Vite y lo levanta. (5 pts)
+· Excelente (5) — Proyecto creado por su cuenta, dependencias instaladas y servidor en
+marcha.
+· Bueno (4) — Proyecto en marcha con alguna consulta puntual.
+· Regular (3) — Levanta el proyecto tras ayuda continua.
+· Requiere mejora (2) — El proyecto arranca con errores en consola sin resolver.
+· No aceptable (0) — No consigue levantar el proyecto.
+Desarrollo de Aplicaciones Empresariales
+ReactJS.
+4-C24-A
+2. Escribe componentes funcionales con JSX y los compone en una interfaz. (5 pts)
+· Excelente (5) — Componentes pequeños y con una responsabilidad cada uno, compuestos en
+la pantalla pedida.
+· Bueno (4) — La interfaz está montada, con algún componente que hace de más.
+· Regular (3) — Escribe casi todo en un solo componente.
+· Requiere mejora (2) — La interfaz no llega a montarse completa.
+· No aceptable (0) — No escribe componentes.
+3. Pasa datos del componente padre a los hijos mediante props. (5 pts)
+· Excelente (5) — Las props llevan solo lo necesario y los hijos no conocen de dónde vienen.
+· Bueno (4) — Las props funcionan aunque alguna sobre.
+· Regular (3) — Duplica los datos en cada componente en vez de pasarlos.
+· Requiere mejora (2) — Las props no llegan bien a los hijos.
+· No aceptable (0) — No usa props.
+4. Entrega el repositorio con la interfaz y sus observaciones. (5 pts)
+· Excelente (5) — Estructura de componentes explicada y dependencias declaradas.
+· Bueno (4) — Entrega completa con observaciones breves.
+· Regular (3) — Entrega el código sin observaciones.
+· Requiere mejora (2) — Entrega parcial o fuera de plazo.
+· No aceptable (0) — No entrega.
+Conclusiones:
+1.

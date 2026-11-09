@@ -1,0 +1,15 @@
+{
+  "teacher_data_tests_and_ai_unchanged": true,
+  "browser_checks": 22,
+  "eight_component_folders_and_safe_synopsis": true,
+  "recorded_team_fixed_and_full_tests": [
+    43,
+    43,
+    47
+  ],
+  "word_and_reference_sha256": {
+    "word": "1d5f59ce6904389a14e69b582ede808fb3e4b19960161b4e99df86a8061ddbd0",
+    "reference": "df50b8c6bc3ba8e7d69d98aab5841f191e38f066f7fc6351b1197ebe0a91d2aa"
+  },
+  "local_tokens_absent": true
+}

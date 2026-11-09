@@ -1,0 +1,12 @@
+
+> cine-tecsup-lab09@0.0.0 duel
+> vitest run --mode team src/duel
+
+
+ RUN  v4.1.12 C:/Users/Magal/OneDrive/Documentos/ChatGPT/Django/frontend
+
+
+ Test Files  8 passed (8)
+      Tests  43 passed (43)
+   Start at  16:11:19
+   Duration  3.00s (transform 1.93s, setup 2.06s, import 3.76s, tests 2.15s, environment 10.03s)

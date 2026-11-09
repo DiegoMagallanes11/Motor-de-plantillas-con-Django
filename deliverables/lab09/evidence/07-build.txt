@@ -1,0 +1,14 @@
+
+> cine-tecsup-lab09@0.0.0 build
+> vite build
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 44 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.63 kB │ gzip:  0.40 kB
+dist/assets/index-DR2rjGMN.css    7.29 kB │ gzip:  2.39 kB
+dist/assets/index-AyAmQzst.js   228.76 kB │ gzip: 71.46 kB
+
+✓ built in 358ms

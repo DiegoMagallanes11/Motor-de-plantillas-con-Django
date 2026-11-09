@@ -1,0 +1,12 @@
+.hero { position: relative; overflow: hidden; color: #fff6ee; background: #211510 url('/art/featured.svg') right center / cover no-repeat; }
+.hero__inner { position: relative; padding-block: 54px 40px; min-height: 440px; }
+.hero__eyebrow { color: #e9ab90; margin-bottom: 22px; }
+.hero__eyebrow span { font-size: 8px; margin-right: 7px; }
+.hero h2 { max-width: 530px; margin: 0 0 16px; font: 66px/.98 Georgia, serif; letter-spacing: -2.5px; text-wrap: balance; }
+.hero__tagline { font-size: 14px; color: #e1ccc2; line-height: 1.6; margin: 0 0 18px; }
+.hero__facts { display: flex; align-items: center; gap: 15px; font-size: 11px; color: #ebd7cb; margin-bottom: 24px; }
+.hero__facts span:first-child { border: 1px solid #b2917f; padding: 2px 6px; }
+.hero .button { background: var(--paper); color: #281d17; }
+.hero__caption { font-size: 10px; color: #c5aa9b; margin-top: 24px; }
+.hero__edition { position: absolute; right: 5%; bottom: 36px; font-size: 11px; line-height: 1.7; letter-spacing: 3px; color: #e6b5a0; }
+@media (max-width: 720px) { .hero { background-position: 65% center; } .hero::before { content: ''; position: absolute; inset: 0; background: #160a0666; } .hero h2 { font-size: 54px; max-width: 340px; } .hero__edition { display: none; } .hero__inner { min-height: 450px; } }

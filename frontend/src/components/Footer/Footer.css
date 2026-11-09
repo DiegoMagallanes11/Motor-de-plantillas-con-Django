@@ -1,0 +1,8 @@
+.footer { background: #1e211f; color: #f4f0e8; padding: 54px 0 22px; }
+.footer__grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 50px; }
+.footer__wordmark { font: 40px/1.05 Georgia, serif; margin: 0 0 20px; letter-spacing: -1px; }
+.footer h2 { font-size: 13px; font-weight: 600; margin: 0 0 20px; }
+.footer__grid > div > p:not(.footer__wordmark), .footer a { font-size: 12px; line-height: 1.8; color: #c3c4bd; }
+.footer a { display: block; width: fit-content; margin-block: 8px; text-underline-offset: 4px; }
+.footer__bottom { margin-top: 45px; padding-top: 18px; border-top: 1px solid #454740; display: flex; justify-content: space-between; gap: 1rem; font-size: 11px; color: #acafa4; }
+@media (max-width: 720px) { .footer__grid { grid-template-columns: 1fr; gap: 25px; } .footer__bottom { flex-direction: column; } }

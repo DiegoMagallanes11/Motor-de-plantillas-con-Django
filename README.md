@@ -1,7 +1,18 @@
 # Django — Laboratorios del curso
 
-Esta rama **lab08-restframework** continúa el proyecto del laboratorio 07.
-`main` conserva el laboratorio 06 y `lab07-orm` conserva el laboratorio 07.
+Esta rama **lab09-react** continúa el proyecto del laboratorio 08.
+`main` conserva el laboratorio 06, `lab07-orm` el laboratorio 07 y
+`lab08-restframework` el laboratorio 08.
+
+## Laboratorio 09
+
+La [cartelera React](frontend/) tiene ocho películas y ocho componentes
+funcionales que reciben props, sin estado ni hooks. Consulta
+[la instalación, el flujo de props y las observaciones](LAB09.md) y la
+[guía resuelta con conclusiones](deliverables/lab09/Lab09_Diego_Magallanes_Linares.docx).
+Las pruebas registradas aprobaron 47 casos principales, 43 de la copia de IA
+corregida y 22 comprobaciones reales de navegador. La aplicación se abre en
+`http://localhost:5173/` después de ejecutar `npm ci` y `npm run dev` en `frontend/`.
 
 ## Laboratorio 08
 
