@@ -1,0 +1,49 @@
+{
+  "source_commit": "38697cf99ad22bf915e4d369ccf692af768ff960",
+  "lab": "Lab12 Ajax y Servicios Web",
+  "backend": {
+    "dependency": "django-cors-headers==4.7.0",
+    "installed": true,
+    "installed_app": "corsheaders",
+    "middleware": "corsheaders.middleware.CorsMiddleware",
+    "allowed_origins": [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173"
+    ],
+    "django_check": "ok",
+    "backend_tests": "100 passed"
+  },
+  "frontend": {
+    "client": "axios",
+    "base_url_env": "VITE_API_URL",
+    "base_url_default": "http://127.0.0.1:8008",
+    "token_key": "dae-s11-token",
+    "operations": [
+      "GET /api/exams/",
+      "POST /api/exams/",
+      "DELETE /api/exams/{id}"
+    ],
+    "hook": "useExams",
+    "states": [
+      "loading",
+      "ready",
+      "error"
+    ],
+    "components": [
+      "ExamsSkeleton",
+      "ExamsList",
+      "ExamForm"
+    ],
+    "tests": "72 passed",
+    "build": "ok"
+  },
+  "delivery": {
+    "rubric_breakdown": {
+      "cors": 5,
+      "axios_crud": 5,
+      "states": 5,
+      "delivery_repository": 5
+    },
+    "total": 20
+  }
+}

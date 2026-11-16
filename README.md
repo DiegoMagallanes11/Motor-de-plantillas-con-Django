@@ -14,6 +14,29 @@ Las pruebas registradas aprobaron 47 casos principales, 43 de la copia de IA
 corregida y 22 comprobaciones reales de navegador. La aplicación se abre en
 `http://localhost:5173/` después de ejecutar `npm ci` y `npm run dev` en `frontend/`.
 
+## Laboratorio 12 — Ajax y Servicios Web
+
+El backend de Django habilita CORS para el frontend React con
+`django-cors-headers` (dependencia en `requirements.txt`, aplicación
+`corsheaders`, middleware `CorsMiddleware` y `CORS_ALLOWED_ORIGINS` con el
+origen `http://localhost:5173`). El frontend del laboratorio 11 (`lab11-hooks/`)
+consume la API real de exámenes con Axios: cliente único en `src/lib/api.js`
+(base URL en `VITE_API_URL`, valor por defecto `http://127.0.0.1:8008`, token en
+`localStorage` bajo `dae-s11-token`) con las operaciones `GET /api/exams/`,
+`POST /api/exams/` y `DELETE /api/exams/{id}`, gestionadas con el hook `useExams`
+(estados loading, ready y error) y los componentes `ExamsList`, `ExamForm` y
+`ExamsSkeleton`.
+
+Consulta [la guía resuelta](LAB12.md) y los
+[entregables](deliverables/lab12/).
+
+Verificación: `manage.py check` sin problemas y 100 pruebas de backend OK;
+`npm test` con 72 pruebas de frontend OK y compilación correcta; verificación en
+caliente de CORS y de CRUD contra el servidor Django en `127.0.0.1:8008`.
+
+Rúbrica del laboratorio: CORS 5 · Axios CRUD 5 · estados 5 · entrega y repositorio 5
+(total 20 puntos).
+
 ## Laboratorio 08
 
 Consulta [la instalación, tabla de la API, pruebas y observaciones](LAB08.md).

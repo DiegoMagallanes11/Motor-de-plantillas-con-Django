@@ -1,0 +1,3 @@
+GET /api/exams/ con token -> 200 OK (CORS ok)
+POST /api/exams/ con token -> 201 Created (CORS ok)
+DELETE /api/exams/6/ con token -> 204 No Content (CORS ok)
