@@ -48,7 +48,7 @@ del seed (`profe` y `agente`) en `/api/docs/`.
 
 ## Entregables
 
-- `deliverables/lab12/Lab12_Diego_Magallanes_Linares.docx`
+- `deliverables/lab12/Lab12_Diego_Magallanes_Linares.docx` (informe completo con capturas, descripciones y evidencias)
 - `deliverables/lab12/Lab12_codigo.zip`
-- `deliverables/lab12/evidence/`
+- `deliverables/lab12/evidence/` (pruebas, verificaciones CORS/CRUD/red y capturas: loading, ready, formulario, creación/eliminación exitosa, error)
 - `LAB12.md`

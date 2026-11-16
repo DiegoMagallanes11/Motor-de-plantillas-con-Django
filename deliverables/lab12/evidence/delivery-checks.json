@@ -1,5 +1,5 @@
 {
-  "source_commit": "38697cf99ad22bf915e4d369ccf692af768ff960",
+  "source_commit": "54a663c",
   "lab": "Lab12 Ajax y Servicios Web",
   "backend": {
     "dependency": "django-cors-headers==4.7.0",
@@ -11,7 +11,9 @@
       "http://127.0.0.1:5173"
     ],
     "django_check": "ok",
-    "backend_tests": "100 passed"
+    "backend_tests": "100 passed",
+    "cors_live_verified": true,
+    "crud_live_verified": true
   },
   "frontend": {
     "client": "axios",
@@ -32,12 +34,36 @@
     "components": [
       "ExamsSkeleton",
       "ExamsList",
-      "ExamForm"
+      "ExamForm",
+      "ErrorBanner"
     ],
     "tests": "72 passed",
     "build": "ok"
   },
+  "evidence": {
+    "screenshots": [
+      "exams-loading.png",
+      "exams-ready.png",
+      "exams-form.png",
+      "exams-create-success.png",
+      "exams-delete-success.png",
+      "exams-error.png",
+      "exams-error-401.png"
+    ],
+    "logs": [
+      "backend-check.txt",
+      "backend-tests.txt",
+      "cors-live.txt",
+      "crud-live.txt",
+      "frontend-tests.txt",
+      "frontend-build.txt",
+      "network-capture.txt"
+    ],
+    "notes": "Capturas tomadas con backend (127.0.0.1:8008) y frontend Vite (localhost:5173) en ejecución consumiendo la API real con token. Incluye evidencia de estados loading/ready/error y operaciones de creación/eliminación en UI."
+  },
   "delivery": {
+    "report": "deliverables/lab12/Lab12_Diego_Magallanes_Linares.docx",
+    "code_archive": "deliverables/lab12/Lab12_codigo.zip",
     "rubric_breakdown": {
       "cors": 5,
       "axios_crud": 5,

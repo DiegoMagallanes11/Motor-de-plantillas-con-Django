@@ -1,0 +1,6 @@
+Evidencia de red (navegador):
+- GET /api/exams/ -> 200 OK con Access-Control-Allow-Origin: http://localhost:5173
+- POST /api/exams/ -> 201 Created (creación exitosa desde UI)
+- OPTIONS /api/exams/7 -> 200 OK con Access-Control-Allow-Methods: DELETE, GET, OPTIONS, PATCH, POST, PUT
+- DELETE desde UI falló por ruta sin slash final (/api/exams/7 -> 500); verificación correcta por API: DELETE /api/exams/7/ -> 204 No Content
+- CORS verificado: origen permitido recibe cabeceras CORS; preflight aceptado.
